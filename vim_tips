@@ -1,0 +1,42 @@
+########
+# regex
+########
+
+# reuse part of search pattern
+%s/\(.*\)/\1/ #what you want to reuse stays within \( \) , what you don't is outside
+
+#############
+# macros
+############
+
+# To enter a macro, type:
+q<letter><commands>q
+# To execute the macro <number> times (once by default), type:
+<number>@<letter>
+
+#######
+# UI
+#######
+
+# move insert mode (to the right move normally)
+<S-Left>    cursor one word back (like "b" command)
+<C-Left>    cursor one word back (like "b" command)
+<S-Right>   cursor one word forward (like "w" command)
+<C-Right>   cursor one word forward (like "w" command)
+
+# delete
+de # delete to end of word
+dw # delete to beginning of  next word (space also)
+d$ # delete to end of line
+
+
+# split vertically
+C-w v
+# move among splitted tabs
+C-w arrow 
+	#or# 
+	 C-w C-w
+## ntree
+:Explore  - opens netrw  in the current window 
+:Sexplore - opens netrw  in a horizontal split
+:Vexplore - opens netrw  in a vertical split

@@ -1,0 +1,46 @@
+#:::::#
+# GIT #
+#:::::#
+
+# discard unstaged changes in file
+git checkout <file-path> 
+
+# discard all unstaged changes
+git checkout -- . 
+
+# revert last published commit, publishes the procedure as a commit
+git revert HEAD 
+
+#show commit to be pushed
+git log origin/master..HEAD
+
+#get commit number from ^
+git show --name-only commit_number 
+
+#diff 10th latest and last 5th latest commit
+git diff HEAD~10 head~5
+
+# delete remote branch, usually remote-name is origin
+git push --delete <remote-name> <branch-name> 
+
+# delete local branch, if -d doesn't work, because the branch wasn't fully merged, you can use -D which stands for delete-force
+git branch -d <branch-name> 
+
+# show remote origins
+git remote -v
+
+# set new remote url
+git remote set-url origin https://github.com/user/repo.git
+
+# use to push existing repo SSH
+git remote set-url origin git@github.com:username/your-repository.git
+
+# clone with ssh
+git clone git@github.com:username/your-repository.git
+
+# apply patches
+git am < [patchfilepath]
+
+
+# submodules
+https://git-scm.com/book/en/v2/Git-Tools-Submodules

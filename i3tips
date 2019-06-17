@@ -1,0 +1,30 @@
+https://i3wm.org/docs/userguide.html#_floating
+
+# open app
+mod + d
+
+# split vertical
+mod + v
+mod + arrow [to other app
+mod + shift + arrow [to move the other app towards the splitted one
+
+# tab mode
+mod + w
+
+# split mode
+mod + e
+
+# fullscreen
+mod + f
+
+# new workspace
+mod + number
+
+# move tab to workspace number N
+mod + shift + number
+
+mod + shift + e
+logout
+
+# Ext monitor
+xrandr --auto
