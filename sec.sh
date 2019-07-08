@@ -5,7 +5,21 @@
 #::::::#
 nmap -v -sn 192.168.1.0/24 | grep -v down
 sudo nmap -sn -PS22,3389 192.168.1.0/24 #custom TCP SYN scan
-sudo nmap -sn -PU161 192.168.1.0/24 #custom UDP scan
+sudo nmap -sn -PU161 192.168.1.0/24 #custom UDP scan (catch 'em all)
+
+
+##############
+# alternative
+# find those not answering to ping
+x=0
+while [ "$x" -lt "255" ]; do
+ping -c 1 10.0.0.$x &
+x=$(expr $x + 1)
+done
+# Wait a few seconds for the pings above to finish
+arp -a 
+##############
+
 
 #::::::::::::::::#
 # reverse shellz #
