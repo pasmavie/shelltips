@@ -1,7 +1,3 @@
-######
-#docker
-docker run --rm -it -v `pwd`:/build ubuntu:18.04 bash
-
 ############
 # SHEBANGS #
 ############
@@ -62,29 +58,6 @@ echo "ABC 123 ABC" | sed -E 's/([0-9]) ([a-zA-Z])/\1,\2/g' # becomes "ABC 123,AB
 sed '/foo/d'
 # delete lines 3-to-6 and pass to stdoutput
 sed 3,6d /path/to/filefoo
-
-#:::::::::::::::#
-# GPG & SHASUMS #
-#:::::::::::::::#
-# import keys
-gpg --import key.asc
-# list keys saved in .gnupg/pubring.kbx
-gpg --list-keys 
-# verify stuff
-gpg --verify [some].iso.asc [some].iso
-gpg --verify SHA256SUMS.gpg SHA256SUMS
-# veryfy sha256
-shasum256 -c SHASUM256 2>&1 | grep OK # 2>&1 means redirect errors to stdout
-#or
-"e04d717ff9d0fff8d125b23b357bcceaef2e8e3877af90b678fde5e1bf05e7e8 *filename" | shasum -c - 
-
-#:::::#
-# SSH #
-#:::::#
-#copy dir (simple)
-scp /path/to/local/dir user@remotehost:/path/to/remote/dir
-#copy dir (transfer only diffs and resume transfer when it breaks)
-rsync -avz -e 'ssh -p 5022' /path/to/local/dir pi@127.0.1.0:/path/to/remote/dir
 
 #::::::::::::::::::::::::::::::::::::::::::::::
 # PARALLEL
