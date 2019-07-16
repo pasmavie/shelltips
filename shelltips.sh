@@ -42,6 +42,7 @@ pkill programname
 # SEARCH
 #:::::::::::::::::::::::::::::::::::::::::::::
 
+find / -iname caseinsensitivenameofmydir -type d 2>&1 | grep -v -e "Permission denied" -e "Operation not permitted"
 find . -name '*dirname*' -type f -size 1033c ! -executable #searchs for file with size 1033byte and not executable
 find . -name '*.zip' -exec mv {} /path/to/new/directory \;
 find . -name '*.log' -exec sh -c "cat /path/to/file.log >> {}" \;
