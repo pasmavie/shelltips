@@ -5,6 +5,14 @@
 #!/bin/sh
 #!/usr/bin/env shell
 
+#################
+# remote jupyter
+################
+jupyter lab --ip=0.0.0.0 --no-browser --allow-root # run in container or remote server
+# then, if remote server use ssh port forwarding: on local machine
+ssh -N -f -L 8888(localport):localhost:8888(remoteport) remotehost
+# if docker just make sure to run the docker container with the -p option
+
 ########
 # curl #
 ########
