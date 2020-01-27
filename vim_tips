@@ -17,6 +17,8 @@ q<letter><commands>q
 #######
 # UI
 #######
+# cycle tabs
+gt gT
 
 # move insert mode (to the right move normally)
 <S-Left>    cursor one word back (like "b" command)
@@ -32,10 +34,10 @@ d$ # delete to end of line
 
 # split vertically
 C-w v
-# move among splitted tabs
-C-w arrow 
+v# move among splitted tabs
+c-w arrow 
 	#or# 
-	 C-w C-w
+	 c-w c-w
 ## ntree
 :Explore  - opens netrw  in the current window 
 :Sexplore - opens netrw  in a horizontal split
