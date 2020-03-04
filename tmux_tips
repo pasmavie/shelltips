@@ -1,2 +1,7 @@
-prefix { or }
-swap panes
+#swap panes
+<prefix>{ or <prefix>}
+
+#send pane to window:
+break-pane; join-pane -t <int>
+#as
+<prefix>!; <prefix>J <int>
