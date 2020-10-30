@@ -1,9 +1,7 @@
-############
-# SHEBANGS #
-############
-
-#!/bin/sh
-#!/usr/bin/env shell
+##################
+# Mount NFTS OSX #
+##################
+sudo /usr/local/bin/ntfs-3g /dev/disk2s1 /Volumes/NTFS -olocal -oallow_other
 
 #################
 # remote jupyter
