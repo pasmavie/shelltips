@@ -1,3 +1,6 @@
+# Available cores
+cat /proc/cpuinfo  | grep processor | wc -l
+
 ##################
 # Mount NFTS OSX #
 ##################
