@@ -1,5 +1,5 @@
 # attach REPL to an active jupyter kernel
-jupyter console --active
+jupyter console --existing
 
 # Display all columns in a pandas df
 import pandas as pd
