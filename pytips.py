@@ -5,3 +5,5 @@ jupyter console --existing
 import pandas as pd
 from IPython.display import display
 pd.options.display.max_columns = None
+
+# Loops
